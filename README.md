@@ -2,10 +2,9 @@
 
 For this to work you must create a .env file in the root directory and add your OpenAI key
 
-``
-PORT=5000
-OPENAI_API_KEY='your_api_key_here'
-``
+`OPENAI_API_KEY=your_api_key_here` 
+
+Get yours here: https://beta.openai.com/
 
 ## Starting the Server
 

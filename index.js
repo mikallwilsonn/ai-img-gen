@@ -2,6 +2,7 @@
 // Dependencies
 const express =  require( 'express' );
 const dotenv = require( 'dotenv' ).config();
+const path = require( 'path' );
 
 
 // --
@@ -12,8 +13,14 @@ const port = process.env.PORT || 5000;
 app.use( express.json() );
 app.use( express.urlencoded({ extended: false }));
 
+
+// Static directory
+app.use( express.static( path.join( __dirname, 'public' )));
+
+
 // Routes
 app.use( '/openai', require( './routes/openaiRoutes' ));
+
 
 // Start Server
 app.listen(( port ), () => {
